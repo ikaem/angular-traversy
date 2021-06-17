@@ -1,0 +1,17 @@
+<!-- angular-crash\src\app\components\item\task-item.component.html -->
+<div
+  class="task"
+  [ngClass]="{ reminder: task?.reminder }"
+  (dblclick)="onToggle()"
+>
+  <h3>
+    {{ task?.text }}
+
+    <fa-icon
+      (click)="onDelete()"
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
+  <p>{{ task?.day }}</p>
+</div>
